@@ -1,0 +1,21 @@
+{
+    "name": "tdd-com-php",
+    "description": "Estudos de TDD com PHP",
+    "authors": [
+        {
+            "name": "Luiz Felipe de Oliva Limeira",
+            "email": "lflimeira02@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Loja\\": "loja/",
+            "Exemplos\\": "exemplos/",
+            "Tests\\": "tests/"
+        }
+    }
+}
