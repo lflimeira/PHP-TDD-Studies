@@ -13,7 +13,7 @@ class Produto
      * @param type $valorUnitario
      * @param type $quantidade
      */
-    public function __construct($nome, $valorUnitario, $quantidade = '')
+    public function __construct($nome, $valorUnitario, $quantidade = 1)
     {
         $this->nome = $nome;
         $this->valorUnitario = $valorUnitario;
@@ -35,12 +35,10 @@ class Produto
     {
         return $this->valorUnitario * $this->quantidade;
     }
-    
     public function getStatus()
     {
         return $this->status;
     }
-    
     public function inativa()
     {
         $this->status = false;
