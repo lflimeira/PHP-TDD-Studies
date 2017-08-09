@@ -8,7 +8,17 @@ class MaiorPreco
 {
     public function encontra(CarrinhoDeCompras $carrinho)
     {
-        return 0;
+        if (count($carrinho->getProdutos()) === 0) {
+            return 0;
+        }
+
+        $maiorValor = $carrinho->getProdutos()[0]->getValorTotal();
+        foreach ($carrinho->getProdutos() as $produto) {
+            if ($maiorValor < $produto->getValorTotal()) {
+                $maiorValor = $produto->getValorTotal();
+            }
+        }
+        return $maiorValor;
     }
 }
 
